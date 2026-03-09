@@ -21,6 +21,12 @@ pipeline{
             }
         }
 
-        // Add the Release stage here
+        stage('Release') {
+            steps {
+                sh '''
+                    oc project mcqvhc-greetings
+                    oc start-build greetings-console  --follow --wait
+                    '''
+        }
     }
 }
