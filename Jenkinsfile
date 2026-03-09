@@ -27,6 +27,7 @@ pipeline{
                     oc project mcqvhc-greetings
                     oc start-build greetings-console  --follow --wait
                     '''
+            }
         }
     }
 }
